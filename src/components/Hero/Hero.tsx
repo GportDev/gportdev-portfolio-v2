@@ -21,18 +21,20 @@ export default function Hero() {
           problems!
         </p>
         <div className='mt-16 flex justify-center gap-8 lg:gap-16'>
-          <Link href='https://github.com/gportdev'>
+          <Link href='https://github.com/gportdev' target='blank'>
             <GitHubLogoIcon className='h-12 w-12 transition-all hover:scale-105 hover:text-green lg:h-16 lg:w-16' />
           </Link>
-          <Link href='mailto:gportdev@gmail.com'>
+          <Link href='mailto:gportdev@gmail.com' target='blank'>
             <EnvelopeClosedIcon className='h-12 w-12 transition-all hover:scale-105 hover:text-green lg:h-16 lg:w-16' />
           </Link>
-          <Link href='https://linkedin.com/in/gabriel-porteiro'>
+          <Link href='https://linkedin.com/in/gabriel-porteiro' target='blank'>
             <LinkedInLogoIcon className='h-12 w-12 transition-all hover:scale-105 hover:text-green lg:h-16 lg:w-16' />
           </Link>
         </div>
-        <div className='mx-auto mt-16 w-fit rounded-lg bg-green p-3 font-bold text-white transition-all hover:scale-105 hover:shadow-md hover:shadow-white/15 lg:p-4'>
-          <a href='#'>Download my resume</a>
+        <div className='mx-auto mt-16 w-fit cursor-pointer rounded-lg bg-green p-3 font-bold text-white transition-all hover:scale-105 hover:shadow-md hover:shadow-white/15 lg:p-4'>
+          <a href='/Gabriel-resume.pdf' target='blank' download={true}>
+            Download my resume
+          </a>
         </div>
       </div>
     </section>
