@@ -67,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${GeistMono.className} mx-auto min-h-screen max-w-[1200px] border border-white px-4`}
+        className={`${GeistMono.className} mx-auto min-h-screen max-w-[1200px] text-balance`}
       >
         <Header />
         {children}

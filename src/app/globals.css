@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}
+
 html {
   background: linear-gradient(135deg, #1a1a1b 21%, #333f44 100%);
   background-repeat: no-repeat;
@@ -20,5 +30,15 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .type-writer h1 {
+    overflow: hidden;
+    border-right: .1em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+      typewriter 4s steps(40, end),
+      blink 1s step-end infinite;
   }
 }

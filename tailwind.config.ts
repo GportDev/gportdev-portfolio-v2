@@ -29,6 +29,15 @@ const config: Config = {
           from: { opacity: '0', transform: 'translateX(-2px)' },
           to: { opacity: '1', transform: 'translateX(0)' },
         },
+        typewriter: {
+          from: { width: '0' },
+          to: { width: '100%' },
+        },
+        blink: {
+          '0%': { 'border-color': 'transparent' },
+          '50%': { 'border-color': 'white' },
+          '100%': { 'border-color': 'transparent' },
+        },
       },
       animation: {
         slideDownAndFade:

@@ -4,25 +4,25 @@ import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu'
 
 export default function Header() {
   return (
-    <header className='py-4'>
-      <nav className='flex justify-between'>
+    <header className='p-4'>
+      <nav className='flex justify-between lg:text-xl'>
         <Link
           href='/'
-          className='hover:text-green transition-all hover:scale-105'
+          className='font-bold transition-all hover:scale-105 hover:text-green'
         >
           {' '}
           &lt;GPORTDEV/&gt;{' '}
         </Link>
-        <div className='hidden gap-4 lg:flex'>
+        <div className='hidden gap-8 lg:flex'>
           <Link
             href='#'
-            className='hover:text-green transition-all hover:scale-105'
+            className='transition-all hover:scale-105 hover:text-green'
           >
             Projects
           </Link>
           <Link
             href='#'
-            className='hover:text-green transition-all hover:scale-105'
+            className='transition-all hover:scale-105 hover:text-green'
           >
             Tech Summaries
           </Link>

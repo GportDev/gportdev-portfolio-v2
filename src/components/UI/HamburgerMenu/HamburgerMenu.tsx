@@ -16,10 +16,11 @@ export default function HamburgerMenu() {
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className='data-[side=top]:animate-slideDownAndFade data-[side=bottom]:animate-slideUpAndFade to-gray-green mr-3 rounded-lg border border-white bg-gradient-to-br from-black p-4 will-change-[opacity,transform]'
+          className='mr-3 rounded-lg border border-white bg-gradient-to-br from-black to-gray-green p-4 will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=top]:animate-slideDownAndFade'
           sideOffset={5}
         >
           <DropdownMenu.Arrow className='-translate-x-[6px] fill-white' />
+
           <DropdownMenu.Item>
             <Link href='#' className='text-sm'>
               Projects
