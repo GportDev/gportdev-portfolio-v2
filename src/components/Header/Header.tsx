@@ -4,7 +4,7 @@ import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu'
 
 export default function Header() {
   return (
-    <header className='p-4'>
+    <header className='p-6'>
       <nav className='flex justify-between lg:text-xl'>
         <Link
           href='/'
@@ -15,13 +15,13 @@ export default function Header() {
         </Link>
         <div className='hidden gap-8 lg:flex'>
           <Link
-            href='#'
+            href='/projects'
             className='transition-all hover:scale-105 hover:text-green'
           >
             Projects
           </Link>
           <Link
-            href='#'
+            href='/tech-summaries'
             className='transition-all hover:scale-105 hover:text-green'
           >
             Tech Summaries

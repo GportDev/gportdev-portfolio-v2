@@ -22,12 +22,12 @@ export default function HamburgerMenu() {
           <DropdownMenu.Arrow className='-translate-x-[6px] fill-white' />
 
           <DropdownMenu.Item>
-            <Link href='#' className='text-sm'>
+            <Link href='/projects' className='text-sm'>
               Projects
             </Link>
           </DropdownMenu.Item>
           <DropdownMenu.Item>
-            <Link href='#' className='text-sm'>
+            <Link href='/tech-summaries' className='text-sm'>
               Tech Sumaries
             </Link>
           </DropdownMenu.Item>
