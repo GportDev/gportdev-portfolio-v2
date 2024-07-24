@@ -5,7 +5,7 @@ import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu'
 export default function Header() {
   return (
     <header className='p-6'>
-      <nav className='flex justify-between lg:text-xl'>
+      <nav className='flex justify-between text-xl'>
         <Link
           href='/'
           className='font-bold transition-all hover:scale-105 hover:text-green'

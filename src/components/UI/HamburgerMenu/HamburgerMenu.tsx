@@ -10,24 +10,27 @@ export default function HamburgerMenu() {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button className='lg:hidden'>
-          <HamburgerMenuIcon fill='#FFF' height={24} width={24} />
+          <HamburgerMenuIcon fill='#FFF' height={32} width={32} />
         </button>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className='mr-3 rounded-lg border border-white bg-gradient-to-br from-black to-gray-green p-4 will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=top]:animate-slideDownAndFade'
+          className='mr-3 flex flex-col gap-4 rounded-lg border border-white bg-gradient-to-br from-black to-gray-green p-6 will-change-[opacity,transform] data-[side=bottom]:animate-slideUpAndFade data-[side=top]:animate-slideDownAndFade'
           sideOffset={5}
         >
           <DropdownMenu.Arrow className='-translate-x-[6px] fill-white' />
 
           <DropdownMenu.Item>
-            <Link href='/projects' className='text-sm'>
+            <Link href='/projects' className='text-base active:text-green'>
               Projects
             </Link>
           </DropdownMenu.Item>
           <DropdownMenu.Item>
-            <Link href='/tech-summaries' className='text-sm'>
+            <Link
+              href='/tech-summaries'
+              className='text-base active:text-green'
+            >
               Tech Sumaries
             </Link>
           </DropdownMenu.Item>
