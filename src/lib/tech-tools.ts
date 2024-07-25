@@ -1,38 +1,96 @@
 export const tools = {
-  HTML5: 'https://img.shields.io/badge/-HTML5-2E3440?style=flat&logo=html5',
-  CSS3: 'https://img.shields.io/badge/-CSS3-2E3440?style=flat&logo=css3',
-  SASS: 'https://img.shields.io/badge/-Sass-2E3440?style=flat&logo=sass',
-  Tailwind:
-    'https://img.shields.io/badge/-Tailwind-2E3440?style=flat&logo=tailwindcss',
-  Javascript:
-    'https://img.shields.io/badge/-Javascript-2E3440?style=flat&logo=javascript',
-  Typescript:
-    'https://img.shields.io/badge/-Typescript-2E3440?style=flat&logo=typescript',
-  Python: 'https://img.shields.io/badge/-Python3-2E3440?style=flat&logo=python',
-  GoLang: 'https://img.shields.io/badge/-Golang-2E3440?style=flat&logo=go',
-  ReactJS:
-    'https://img.shields.io/badge/-React.JS-2E3440?style=flat&logo=react',
-  NextJS:
-    'https://img.shields.io/badge/-Next.JS-2E3440?style=flat&logo=next.js',
-  Jest: 'https://img.shields.io/badge/-Jest-2E3440?style=flat&logo=jest',
-  NodeJS:
-    'https://img.shields.io/badge/-Node.JS-2E3440?style=flat&logo=node.js',
-  MySQL: 'https://img.shields.io/badge/-MySQL-2E3440?style=flat&logo=mysql',
-  PostgreSQL:
-    'https://img.shields.io/badge/PostgreSQL-2E3440?style=flat&logo=postgreSQL',
-  MongoDB:
-    'https://img.shields.io/badge/-MongoDB-2E3440?style=flat&logo=mongodb',
-  GraphQL:
-    'https://img.shields.io/badge/-GraphQL-2E3440?style=flat&logo=graphql',
-  Figma: 'https://img.shields.io/badge/-Figma-2E3440?style=flat&logo=figma',
-  Git: 'https://img.shields.io/badge/-Git-2E3440?style=flat&logo=git',
-  Docker: 'https://img.shields.io/badge/-Docker-2E3440?style=flat&logo=docker',
-  Linux: 'https://img.shields.io/badge/-Linux-2E3440?style=flat&logo=linux',
-  Windows:
-    'https://img.shields.io/badge/-Windows-2E3440?style=flat&logo=windows',
-  Android:
-    'https://img.shields.io/badge/-Android-2E3440?style=flat&logo=android',
-  iOS: 'https://img.shields.io/badge/-iOS-2E3440?style=flat&logo=ios',
+  HTML5: {
+    name: 'HTML5',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+  },
+  CSS3: {
+    name: 'CSS3',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+  },
+  Tailwind: {
+    name: 'TailwindCss',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+  },
+  Javascript: {
+    name: 'Javascript',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg',
+  },
+  Typescript: {
+    name: 'Typescript',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+  },
+  Python: {
+    name: 'Python',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+  },
+  GoLang: {
+    name: 'Go',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg',
+  },
+  ReactJS: {
+    name: 'ReactJS',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+  },
+  NextJS: {
+    name: 'NextJS',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+  },
+  Jest: {
+    name: 'Jest',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg',
+  },
+  Vite: {
+    name: 'Vite',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg',
+  },
+  Vitest: {
+    name: 'Vitest',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg',
+  },
+  NodeJS: {
+    name: 'NodeJS',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
+  },
+  NestJS: {
+    name: 'NestJS',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg',
+  },
+  MySQL: {
+    name: 'MySQL',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+  },
+  PostgreSQL: {
+    name: 'PostgreSQL',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
+  },
+  MongoDB: {
+    name: 'MongoDB',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
+  },
+  GraphQL: {
+    name: 'GraphQL',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg',
+  },
+  Figma: {
+    name: 'Figma',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg',
+  },
+  Git: {
+    name: 'Git',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+  },
+  Docker: {
+    name: 'Docker',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg',
+  },
+  AWS: {
+    name: 'Amazon Web Services (AWS)',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+  },
+  DigitalOcean: {
+    name: 'Digital Ocean',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg',
+  },
 }
 
 export type ToolsType = typeof tools

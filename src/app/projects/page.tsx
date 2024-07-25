@@ -1,7 +1,8 @@
 import React from 'react'
 import Project from '@/components/UI/Project/Project'
-import { personalProjects } from '@/lib/projects'
+import { employeeProjects, personalProjects } from '@/lib/projects'
 import { ToolsType } from '@/lib/tech-tools'
+import { logoConverter } from '@/utils/logo-converter'
 
 export default function Projects() {
   return (
@@ -19,10 +20,9 @@ export default function Projects() {
               Personal
             </h2>
             <div className='mt-8 space-y-16'>
-              {personalProjects.map((project, index) => {
+              {personalProjects.map((project) => {
                 return (
                   <Project
-                    index={index + 1}
                     key={project.title}
                     title={project.title}
                     description={project.description}
@@ -31,7 +31,7 @@ export default function Projects() {
                     duration={project.duration}
                     role={project.role}
                     learned={project.learned}
-                    image={project.image}
+                    image={logoConverter(project.image)}
                     usedTools={project.usedTools as (keyof ToolsType)[]}
                   />
                 )
@@ -43,7 +43,24 @@ export default function Projects() {
             <h2 className='text-2xl font-semibold underline underline-offset-2 lg:text-3xl'>
               Worked on as employee
             </h2>
-            <div className='mt-8 space-y-16'></div>
+            <div className='mt-8 space-y-16'>
+              {employeeProjects.map((project) => {
+                return (
+                  <Project
+                    key={project.title}
+                    title={project.title}
+                    description={project.description}
+                    link={project.link}
+                    gitHubLink={project.gitHubLink}
+                    duration={project.duration}
+                    role={project.role}
+                    learned={project.learned}
+                    image={logoConverter(project.image)}
+                    usedTools={project.usedTools as (keyof ToolsType)[]}
+                  />
+                )
+              })}
+            </div>
           </section>
         </div>
       </div>

@@ -14,18 +14,19 @@ export default function SummaryCard({ content }: { content: Summary }) {
   return (
     <Link
       href={content.link}
-      className='flex items-center gap-4 rounded-lg border-[0.5px] border-white p-4 text-left transition-all hover:scale-105 hover:bg-green/10'
+      className='flex items-center gap-4 rounded-lg border-[0.5px] border-white p-4 text-left transition-all hover:scale-105 hover:bg-gray-green/40'
     >
-      <Image
-        src={content.icon}
-        alt={content.title}
-        width={64}
-        height={64}
-        sizes='(max-width: 768px) 32px, (max-width: 1200px) 64px'
-      />
-      <div className='space-y-4'>
+      <div className='flex flex-col gap-4'>
         <div className='flex items-center justify-between'>
-          <h3 className='font-bold lg:text-xl'>{content.title}</h3>
+          <div className='flex items-center gap-4'>
+            <Image
+              src={content.icon}
+              alt={content.title}
+              width={32}
+              height={32}
+            />
+            <h3 className='font-bold lg:text-xl'>{content.title}</h3>
+          </div>
           <div className={`${isDone} rounded-full px-4 py-1 text-sm font-bold`}>
             <p>{content.status}</p>
           </div>
