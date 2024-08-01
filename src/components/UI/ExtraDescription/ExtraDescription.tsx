@@ -16,7 +16,7 @@ export default function ExtraDescription({
 }: {
   duration: string
   role: string
-  learned: string
+  learned: string[]
 }) {
   return (
     <Accordion.Root className='' type='single' collapsible>
@@ -32,11 +32,11 @@ export default function ExtraDescription({
             <div className='flex flex-wrap items-center gap-4'>
               <div className='flex items-center gap-2'>
                 <ClockIcon className='text-green' />
-                {duration}
+                <p>{duration}</p>
               </div>
               <div className='flex items-center gap-2'>
                 <PersonIcon className='text-green' />
-                {role}
+                <p>{role}</p>
               </div>
             </div>
             <div>
@@ -44,7 +44,15 @@ export default function ExtraDescription({
                 <CheckCircledIcon className='text-green' />
                 <h4>What I learned with that project?</h4>
               </div>
-              <p className='mt-2'>{learned}</p>
+              <ul className='ml-6 mt-2 space-y-2'>
+                {learned.map((item, index) => {
+                  return (
+                    <li className='list-inside list-disc' key={index}>
+                      {item}
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
           </div>
         </Accordion.Content>

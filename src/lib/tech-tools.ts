@@ -91,6 +91,10 @@ export const tools = {
     name: 'Digital Ocean',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/digitalocean/digitalocean-original.svg',
   },
+  Flutter: {
+    name: 'Flutter',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg',
+  },
 }
 
 export type ToolsType = typeof tools

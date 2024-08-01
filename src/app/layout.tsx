@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Header from '@/components/Header/Header'
+import { Providers } from '@/components/providers/Providers'
 import './globals.css'
 
 const GeistMono = localFont({
@@ -70,7 +71,7 @@ export default function RootLayout({
         className={`${GeistMono.className} mx-auto min-h-screen max-w-[1200px] text-balance pb-16`}
       >
         <Header />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

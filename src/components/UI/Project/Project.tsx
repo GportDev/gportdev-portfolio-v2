@@ -23,13 +23,13 @@ export default function Project({
   gitHubLink: string
   duration: string
   role: string
-  learned: string
+  learned: string[]
   usedTools: (keyof ToolsType)[]
 }) {
   return (
     <div className='flex w-full flex-col justify-between gap-8 rounded-lg lg:flex-row'>
       <div className='flex w-full flex-col justify-between gap-8 text-left'>
-        <div className='flex flex-col gap-6 p-6'>
+        <div className='flex flex-col gap-6'>
           <div className='flex items-center gap-4'>
             <Link
               href={link}
