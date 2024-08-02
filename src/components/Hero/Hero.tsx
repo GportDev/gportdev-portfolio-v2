@@ -6,6 +6,7 @@ import {
 } from '@radix-ui/react-icons'
 import React from 'react'
 import Link from 'next/link'
+import ResumeDownload from '../Buttons/ResumeDownload'
 
 export default function Hero() {
   return (
@@ -32,11 +33,7 @@ export default function Hero() {
             <LinkedInLogoIcon className='h-12 w-12 transition-all hover:scale-105 hover:text-green hover:drop-shadow-[0px_0px_16px_rgba(148,243,228,0.35)] lg:h-16 lg:w-16' />
           </Link>
         </div>
-        <div className='mx-auto mt-16 w-fit cursor-pointer rounded-lg bg-green p-3 font-bold text-white transition-all hover:scale-105 hover:shadow-md hover:shadow-white/15 lg:p-4'>
-          <a href='/Gabriel-resume.pdf' target='blank' download={true}>
-            Download my resume
-          </a>
-        </div>
+        <ResumeDownload />
         <div className='mt-16 flex justify-center gap-8 lg:gap-16'>
           <DoubleArrowDownIcon className='mt-8 h-16 w-16 animate-bounce text-green drop-shadow-[0px_0px_16px_rgba(148,243,228,0.35)] transition-all lg:h-24 lg:w-24' />
         </div>
