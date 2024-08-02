@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Header from '@/components/Header/Header'
@@ -92,6 +94,8 @@ export default function RootLayout({
       <body
         className={`${GeistMono.className} mx-auto min-h-screen max-w-[1200px] text-balance pb-16`}
       >
+        <SpeedInsights />
+        <Analytics />
         <Header />
         <Providers>{children}</Providers>
       </body>
