@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import HamburgerMenu from '../UI/HamburgerMenu/HamburgerMenu'
+import ScrollLink from '../UI/ScrollLink/ScrollLink'
 
 export default function Header() {
   return (
@@ -14,12 +15,7 @@ export default function Header() {
           &lt;GPORTDEV/&gt;{' '}
         </Link>
         <div className='hidden gap-8 lg:flex'>
-          <Link
-            href='/projects'
-            className='transition-all hover:scale-105 hover:font-black hover:text-green hover:drop-shadow-[0px_0px_16px_rgba(148,243,228,0.35)]'
-          >
-            Projects
-          </Link>
+          <ScrollLink targetId='projects'>Projects</ScrollLink>
           <Link
             href='https://gportdev.notion.site/'
             target='blank'

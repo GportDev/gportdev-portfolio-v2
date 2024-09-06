@@ -6,7 +6,10 @@ import { logoConverter } from '@/utils/logo-converter'
 
 export default function Projects() {
   return (
-    <section className='flex h-full min-h-screen flex-col items-center justify-center'>
+    <section
+      id='projects'
+      className='flex h-full min-h-screen scroll-m-[128px] flex-col items-center justify-center'
+    >
       <div className='w-full px-6 text-center'>
         <div className='mx-auto w-fit'>
           <h1 className='animate-blink text-4xl font-bold lg:text-6xl'>
