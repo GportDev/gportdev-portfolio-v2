@@ -1,17 +1,21 @@
-import React from 'react'
 import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <section className='my-16 flex h-full flex-col items-center'>
-      <h1 className='text-6xl'>404</h1>
-      <h2 className='text-3xl'>Sorry, page not found</h2>
+    <main className='mx-auto flex min-h-[70vh] max-w-[1200px] flex-col items-center justify-center px-4 text-center'>
+      <p className='font-mono text-sm text-green'>
+        <span className='text-faint'>~ $</span> cd ./this-page
+      </p>
+      <h1 className='mt-4 text-6xl font-bold sm:text-8xl'>404</h1>
+      <p className='mt-4 text-muted'>
+        No such file or directory. Even pilots miss a runway sometimes.
+      </p>
       <Link
         href='/'
-        className='mx-auto mt-16 w-fit cursor-pointer rounded-lg bg-green p-3 font-bold text-white transition-all hover:scale-105 hover:shadow-md hover:shadow-white/15 lg:p-4'
+        className='press mt-10 rounded-xl bg-green px-5 py-3 font-semibold text-ink hover:bg-green-light'
       >
-        Go Back to Home
+        Back to home
       </Link>
-    </section>
+    </main>
   )
 }

@@ -1,44 +1,205 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+@theme {
+  --font-sans: var(--font-geist-mono), ui-monospace, monospace;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-black: #1a1a1b;
+  --color-gray-green: #333f44;
+  --color-green: #37aa9c;
+  --color-green-light: #94f3e4;
+  --color-ink: #0f1112;
+  --color-surface: rgb(255 255 255 / 0.03);
+  --color-surface-strong: rgb(255 255 255 / 0.06);
+  --color-line: rgb(255 255 255 / 0.09);
+  --color-line-strong: rgb(255 255 255 / 0.16);
+  --color-muted: rgb(255 255 255 / 0.62);
+  --color-faint: rgb(255 255 255 / 0.42);
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+
+  --shadow-glow: 0 0 24px rgb(148 243 228 / 0.18);
+
+  --animate-accordion-down: accordion-down 260ms var(--ease-out-strong);
+  --animate-accordion-up: accordion-up 200ms var(--ease-out-strong);
+  --animate-pop-in: pop-in 180ms var(--ease-out-strong);
+  --animate-pop-out: pop-out 120ms var(--ease-out-strong) forwards;
+  --animate-pulse-dot: pulse-dot 2.4s var(--ease-out-strong) infinite;
+  --animate-aurora: aurora 22s ease-in-out infinite alternate;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+    to {
+      height: 0;
+      opacity: 0;
+    }
+  }
+  @keyframes pop-in {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes pop-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+  @keyframes pulse-dot {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    70%,
+    100% {
+      transform: scale(2.4);
+      opacity: 0;
+    }
+  }
+  @keyframes aurora {
+    from {
+      transform: translate3d(-6%, -4%, 0) rotate(0deg) scale(1);
+    }
+    to {
+      transform: translate3d(6%, 5%, 0) rotate(12deg) scale(1.1);
+    }
+  }
 }
 
-@keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: white; }
-}
+@layer base {
+  html {
+    color-scheme: dark;
+    background-color: var(--color-black);
+    background-image: linear-gradient(
+      135deg,
+      var(--color-black) 21%,
+      var(--color-gray-green) 100%
+    );
+    background-attachment: fixed;
+    color: #fff;
+  }
 
-html {
-  background: linear-gradient(135deg, #1a1a1b 21%, #333f44 100%);
-  background-repeat: no-repeat;
-  color: #FFF;
-  background-color: #1a1a1b;
-}
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  ::selection {
+    background: rgb(55 170 156 / 0.45);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-green-light);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
 
-  .type-writer h1 {
-    overflow: hidden;
-    border-right: .1em solid white;
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: 
-      typewriter 4s steps(40, end),
-      blink 1s step-end infinite;
+  /* Subtle dotted grid used behind sections */
+  .bg-dots {
+    background-image: radial-gradient(
+      rgb(255 255 255 / 0.07) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 24px rgb(148 243 228 / 0.35);
+  }
+
+  /* Pressable feedback. Applies everywhere, hover lift only on real pointers. */
+  .press {
+    transition-property:
+      transform, background-color, border-color, color, box-shadow;
+    transition-duration: 160ms;
+    transition-timing-function: var(--ease-out-strong);
+  }
+  .press:active {
+    transform: scale(0.97);
+  }
+
+  .lift {
+    transition-property: transform, border-color, background-color, box-shadow;
+    transition-duration: 220ms;
+    transition-timing-function: var(--ease-out-strong);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .lift:hover {
+      transform: translateY(-2px);
+      border-color: rgb(55 170 156 / 0.45);
+      background-color: rgb(255 255 255 / 0.05);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  .lift:hover,
+  .press:active {
+    transform: none !important;
+  }
+}
+
+/* Arrow icons hint where a link goes. Real pointers only, never under reduced motion. */
+.nudge-out,
+.nudge-down {
+  transition: transform 160ms var(--ease-out-strong);
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .group:hover .nudge-out {
+    transform: translate(2px, -2px);
+  }
+  .group:hover .nudge-down {
+    transform: translateY(2px);
   }
 }

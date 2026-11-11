@@ -1,103 +1,126 @@
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
-import Header from '@/components/Header/Header'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Footer } from '@/components/layout/Footer'
+import { Header } from '@/components/layout/Header'
 import { Providers } from '@/components/providers/Providers'
+import { profile } from '@/lib/data/profile'
 import './globals.css'
 
-const GeistMono = localFont({
-  src: [
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-UltraBlack.woff2',
-      weight: '900',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-Black.woff2',
-      weight: '800',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-Light.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-Thin.woff2',
-      weight: '200',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/Geist-Mono/GeistMono-UltraLight.woff2',
-      weight: '100',
-      style: 'normal',
-    },
-  ],
+const geistMono = localFont({
+  src: '../../public/fonts/Geist-Mono/GeistMonoVariableVF.woff2',
+  weight: '100 900',
   variable: '--font-geist-mono',
+  display: 'swap',
 })
 
+const description =
+  'Gabriel Porteiro, full-stack software engineer at SEO Gets and founder of Fondor Labs. React, TypeScript, Go and Python. Former Brazilian Air Force pilot. Live resume and portfolio.'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(profile.site),
   title: {
     template: '%s | GportDev',
-    default: 'GportDev | Gabriel Porteiro',
+    default: 'Gabriel Porteiro · Full-Stack Software Engineer',
   },
-  description: "A normal man using computers to solve human's problems.",
-  keywords: [],
+  description,
+  keywords: [
+    'Gabriel Porteiro',
+    'GportDev',
+    'full-stack software engineer',
+    'React',
+    'TypeScript',
+    'Go',
+    'Python',
+    'Next.js',
+    'SaaS',
+    'Stripe',
+    'MCP',
+    'SEO Gets',
+    'Fondor Labs',
+    'Cookeville',
+    'Tennessee Tech',
+  ],
+  alternates: { canonical: '/' },
   openGraph: {
     images: '/share-image.png',
-    type: 'website',
-    locale: 'pt-BR',
-    url: 'https://www.gportdev.com',
+    type: 'profile',
+    locale: 'en_US',
+    url: profile.site,
     siteName: 'GportDev',
-    title: 'GportDev | Gabriel Porteiro',
-    description: "A normal man using computers to solve human's problems.",
+    title: 'Gabriel Porteiro · Full-Stack Software Engineer',
+    description,
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gabriel Porteiro · Full-Stack Software Engineer',
+    description,
+    images: '/share-image.png',
   },
+  robots: { index: true, follow: true },
   category: 'technology',
+}
+
+export const viewport: Viewport = {
+  themeColor: '#1a1a1b',
+  colorScheme: 'dark',
+}
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  alternateName: 'GportDev',
+  url: profile.site,
+  email: `mailto:${profile.email}`,
+  jobTitle: profile.headline,
+  worksFor: {
+    '@type': 'Organization',
+    name: 'SEO Gets',
+    url: 'https://seogets.com',
+  },
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Tennessee Technological University',
+    },
+    { '@type': 'CollegeOrUniversity', name: 'Academia da Força Aérea' },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Cookeville',
+    addressRegion: 'TN',
+    addressCountry: 'US',
+  },
+  sameAs: [profile.links.github, profile.links.linkedin],
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${GeistMono.className} mx-auto min-h-screen max-w-[1200px] text-balance pb-16`}
-      >
+    <html lang='en' className={geistMono.variable}>
+      <body className='min-h-screen font-mono'>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
+        <a
+          href='#main'
+          className='sr-only z-[60] rounded-lg bg-green px-4 py-2 text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3'
+        >
+          Skip to content
+        </a>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
         <SpeedInsights />
         <Analytics />
-        <Header />
-        <Providers>{children}</Providers>
       </body>
     </html>
   )
