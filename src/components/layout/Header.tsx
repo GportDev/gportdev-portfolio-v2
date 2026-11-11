@@ -50,7 +50,7 @@ export function Header() {
   if (inNav && active !== pillId) setPillId(active)
 
   return (
-    <header className='sticky top-0 z-50 px-0 lg:top-4 lg:px-6'>
+    <header className='fixed inset-x-0 top-0 z-50 lg:top-4 lg:px-6'>
       <nav
         aria-label='Main'
         className='mx-auto flex max-w-[1200px] items-center justify-between gap-4 border-b border-line bg-black/70 px-4 py-3 backdrop-blur-md sm:px-6 lg:rounded-full lg:border lg:py-2.5 lg:pr-2.5'

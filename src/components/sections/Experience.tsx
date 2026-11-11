@@ -18,10 +18,10 @@ export function Experience() {
       id='experience'
       index='03'
       eyebrow='Experience'
-      title='Where I’ve shipped'
+      title="Where I've shipped"
       emoji='💼'
       icon={Briefcase}
-      description='Startups, fintech, research and a flight school. Most recent first.'
+      description='Startups, fintech, a research lab and the Air Force. Most recent first.'
     >
       <Reveal>
         <FeaturedRole />

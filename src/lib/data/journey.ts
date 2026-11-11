@@ -10,7 +10,7 @@ export const journey: Milestone[] = [
     year: '2016',
     emoji: '🎖️',
     title: 'Air Force prep school',
-    detail: 'Three years at EPCAR, Brazil’s Air Force cadet high school.',
+    detail: "Three years at EPCAR, Brazil's Air Force cadet high school.",
   },
   {
     year: '2019',
@@ -28,7 +28,8 @@ export const journey: Milestone[] = [
     year: '2022',
     emoji: '💳',
     title: 'Fintech engineer',
-    detail: 'Full-time offer in 6 months; built the DMPag BNPL front end.',
+    detail:
+      'Got a full-time offer in 6 months and built the DMPag BNPL front end.',
   },
   {
     year: '2023',
@@ -41,7 +42,7 @@ export const journey: Milestone[] = [
     year: '2024',
     emoji: '🔬',
     title: 'Research + Google',
-    detail: 'Research assistant on NDN-Hydra; Generation Google Scholar.',
+    detail: 'Research assistant on NDN-Hydra, and a Generation Google Scholar.',
   },
   {
     year: '2025',
@@ -54,6 +55,6 @@ export const journey: Milestone[] = [
     emoji: '🚀',
     title: 'Graduated & founded',
     detail:
-      'B.S. in May; launched Fondor Labs to build for clients and ourselves.',
+      'Finished the B.S. and launched Fondor Labs to build for clients and ourselves.',
   },
 ]

@@ -26,7 +26,7 @@ export const projects: Project[] = [
     status: 'live',
     period: '2026',
     description:
-      'The commercial platform Ademicon Global’s sales team runs on: leads, pipeline, R1/R2 meeting calendar, remarketing, a sales simulator, and a full-screen TV panel for the sales floor.',
+      "The commercial platform Ademicon Global's sales team runs on: leads, pipeline, R1/R2 meeting calendar, remarketing, a sales simulator, and a full-screen TV panel for the sales floor.",
     highlights: [
       '~500 commits, in production',
       'Monorepo with shared auth, UI, DB and API-client packages',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     status: 'building',
     period: '2026',
     description:
-      'Multi-tenant B2B SaaS that turns new sales consultants into effective sellers with an AI copilot, voice roleplay with AI customers, adaptive training and performance analytics.',
+      'Multi-tenant B2B SaaS that trains new sales consultants with an AI copilot, voice roleplay against AI customers, adaptive lessons and performance analytics.',
     highlights: [
       'Org isolation, 4-role RBAC, invitations, audit logs',
       'i18n in English, Portuguese and Spanish',
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     status: 'live',
     period: '2026',
     description:
-      'AI job-application workspace: track applications on a board, score fit with cited evidence, tailor resumes and cover letters, and export polished PDFs.',
+      'An AI workspace for job hunting. Track applications on a board, score fit with cited evidence, tailor resumes and cover letters, and export PDFs.',
     highlights: [
       'Explained fit score with evidence from your own history',
       'Notion-style live-preview Markdown editor',

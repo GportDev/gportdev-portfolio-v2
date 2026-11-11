@@ -15,14 +15,15 @@ const geistMono = localFont({
   display: 'swap',
 })
 
+const title = 'Gabriel Porteiro · Full-Stack Software Engineer'
 const description =
-  'Gabriel Porteiro, full-stack software engineer at SEO Gets and founder of Fondor Labs. React, TypeScript, Go and Python. Former Brazilian Air Force pilot. Live resume and portfolio.'
+  'Full-stack engineer at SEO Gets and founder of Fondor Labs. I ship SaaS with React, Go and Python. Former Brazilian Air Force pilot.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.site),
   title: {
     template: '%s | GportDev',
-    default: 'Gabriel Porteiro · Full-Stack Software Engineer',
+    default: title,
   },
   description,
   keywords: [
@@ -43,20 +44,19 @@ export const metadata: Metadata = {
     'Tennessee Tech',
   ],
   alternates: { canonical: '/' },
+  // Share images come from app/opengraph-image.tsx and app/twitter-image.tsx.
   openGraph: {
-    images: '/share-image.png',
     type: 'profile',
     locale: 'en_US',
     url: profile.site,
     siteName: 'GportDev',
-    title: 'Gabriel Porteiro · Full-Stack Software Engineer',
+    title,
     description,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gabriel Porteiro · Full-Stack Software Engineer',
+    title,
     description,
-    images: '/share-image.png',
   },
   robots: { index: true, follow: true },
   category: 'technology',

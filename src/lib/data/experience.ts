@@ -57,7 +57,7 @@ export const seoGets: Experience & { features: FeatureArea[] } = {
   period: 'Sep 2025 – Present',
   current: true,
   summary:
-    'Main engineer of an SEO analytics SaaS built on Google Search Console and GA4. I own the product end to end, from the React app and Go API to billing and AI, and I double as the company’s CFO.',
+    "Main engineer of an SEO analytics SaaS built on Google Search Console and GA4. I own the product end to end, from the React app and Go API to billing and AI, and I double as the company's CFO.",
   metrics: [
     { value: '+127%', label: 'revenue' },
     { value: '+80%', label: 'customers' },
@@ -96,7 +96,7 @@ export const seoGets: Experience & { features: FeatureArea[] } = {
       period: 'Now',
       badge: 'Beta',
       blurb:
-        'What I’m building now: a public API so customers can pull their SEO Gets data into their own tools.',
+        "What I'm building now. A public API that lets customers pull their SEO Gets data into their own tools.",
       bullets: [],
     },
     {
@@ -105,7 +105,7 @@ export const seoGets: Experience & { features: FeatureArea[] } = {
       title: 'Per-property billing',
       period: '2026',
       blurb:
-        'A full refactor of how SEO Gets charges: from tier plans and coupons to graduated per-property pricing, with the business rules rewritten from scratch.',
+        'I rewrote how SEO Gets charges customers. Tier plans and coupons became graduated per-property pricing, and every business rule behind them changed.',
       stats: [
         { value: '2 weeks', label: 'idea to production' },
         { value: 'Solo', label: 'with AI agents' },
@@ -124,7 +124,7 @@ export const seoGets: Experience & { features: FeatureArea[] } = {
       blurb:
         'Chat with your SEO data. In beta, not launched yet. It streams answers, shows its tool calls, and charges usage against team credits.',
       bullets: [
-        'Shipped alongside it: one-click setup, where Claude builds a site’s topic clusters and content groups in the background.',
+        "Also built one-click setup. Claude generates a site's topic clusters and content groups in the background.",
       ],
     },
     {
@@ -133,7 +133,7 @@ export const seoGets: Experience & { features: FeatureArea[] } = {
       title: 'MCP server',
       period: 'Aug – Oct 2026',
       blurb:
-        'Lets AI agents like Claude and ChatGPT query a customer’s SEO Gets data directly.',
+        "Lets AI agents like Claude and ChatGPT query a customer's SEO Gets data directly.",
       bullets: [
         'Released MCP 2.0.1 and 2.0.2, plus the setup guide and a ChatGPT plugin.',
       ],
@@ -144,7 +144,7 @@ export const seoGets: Experience & { features: FeatureArea[] } = {
       title: 'GA4 & analytics engine',
       period: 'Jan – Oct 2026',
       blurb:
-        'The GA4 dashboard, including Organic vs LLM traffic, and one analytics layer that merges GSC and GA4 behind every endpoint.',
+        'Built the GA4 dashboard, including an Organic vs LLM traffic chart. Under it, one analytics layer merges GSC and GA4 for every endpoint.',
       bullets: [
         'Tuned DuckDB and query paths so large portfolios stay fast and stop hitting memory limits.',
       ],
@@ -190,13 +190,13 @@ export const experiences: Experience[] = [
     period: '2026 – Present',
     current: true,
     summary:
-      'Founder of a US-based software studio: "Take off your ideas. You name it, we build it." I lead engineering for client platforms and our own products.',
+      'I founded Fondor Labs, a US-based software studio that builds for clients and for itself. I lead the engineering.',
     roles: [
       {
         title: 'Founder & Software Engineer',
         period: '2026 – Present',
         bullets: [
-          'Shipped Ademicon Global’s commercial hub to production: leads, pipeline, meeting calendar, remarketing, sales simulator and a kiosk TV sales floor.',
+          "Shipped Ademicon Global's commercial hub to production: leads, pipeline, meeting calendar, remarketing, sales simulator and a kiosk TV sales floor.",
           'Building AbordIQ, a multi-tenant AI sales-enablement SaaS with copilot guidance, voice roleplay and adaptive training.',
         ],
       },
@@ -320,7 +320,7 @@ export const experiences: Experience[] = [
         type: 'Internship',
         bullets: [
           'First intern to receive a full-time offer within 6 months.',
-          'Rotated through Software Engineering, Data Science and Cybersecurity; built a credit card application platform with React and Python.',
+          'Rotated through Software Engineering, Data Science and Cybersecurity, and built a credit card application platform with React and Python.',
         ],
       },
     ],
@@ -341,8 +341,7 @@ export const experiences: Experience[] = [
     mark: { kind: 'image', src: '/logos/afa.png', fit: 'contain' },
     location: 'Pirassununga, Brazil',
     period: 'Jan 2019 – Jul 2021',
-    summary:
-      'Before code, cockpits. Flight-officer training where checklists, debriefs and calm under pressure became habits.',
+    summary: 'Flight-officer training, before I switched to software.',
     metrics: [
       { value: 'Top 10', label: 'of 98 pilots' },
       { value: '85%', label: 'missions aced' },

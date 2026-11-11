@@ -19,7 +19,7 @@ export const leadership: Leadership[] = [
     emoji: '🗺️',
   },
   {
-    role: 'Honors Council member & “Big-sib” mentor',
+    role: 'Honors Council member & "Big-sib" mentor',
     org: 'Tennessee Tech Honors',
     period: '2024 – 2026',
     emoji: '🤝',

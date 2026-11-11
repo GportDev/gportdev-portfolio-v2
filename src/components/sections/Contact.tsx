@@ -29,12 +29,11 @@ export function Contact() {
                 id='contact-title'
                 className='mx-auto mt-5 max-w-3xl text-3xl font-bold tracking-tight text-balance sm:text-5xl'
               >
-                Let’s build something together <span aria-hidden>✈️</span>
+                Want to work together? <span aria-hidden>✈️</span>
               </h2>
               <p className='mx-auto mt-5 max-w-xl text-pretty text-muted sm:text-lg'>
-                Open to full-stack and product engineering roles, and to new
-                projects through Fondor Labs. The fastest way to reach me is
-                email.
+                Have a project for Fondor Labs, or want to talk engineering?
+                Email is the fastest way to reach me.
               </p>
               <div className='mt-9 flex flex-wrap items-center justify-center gap-3'>
                 <CopyEmail email={profile.email} />

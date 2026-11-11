@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <main className='mx-auto flex min-h-[70vh] max-w-[1200px] flex-col items-center justify-center px-4 text-center'>
+    <main className='mx-auto flex min-h-[70vh] max-w-[1200px] flex-col items-center justify-center px-4 pt-24 text-center'>
       <p className='font-mono text-sm text-green'>
         <span className='text-faint'>~ $</span> cd ./this-page
       </p>

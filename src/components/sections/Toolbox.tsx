@@ -13,7 +13,7 @@ export function Toolbox() {
       title='Toolbox'
       emoji='🧰'
       icon={Wrench}
-      description='What I reach for day to day, grouped by where it lives in the stack.'
+      description='What I use day to day, grouped by layer.'
     >
       <Stagger className='columns-1 gap-4 md:columns-2 lg:columns-3'>
         {skillGroups.map((g) => (

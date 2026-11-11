@@ -6,7 +6,7 @@ export const profile = {
   company: 'SEO Gets',
   tagline: 'Using computers to solve human problems.',
   intro:
-    'Ex-Air Force pilot turned software engineer. I ship SaaS end to end with React, Go, and Python: billing, AI features, analytics, and the boring parts that keep it all running.',
+    'Former Air Force pilot, now a software engineer. I build SaaS products end to end in React, Go and Python, mostly billing, analytics and AI features.',
   location: 'Cookeville, TN',
   openToWork: false,
   email: 'gportdev@gmail.com',
@@ -29,7 +29,7 @@ export const profile = {
     {
       emoji: '🎓',
       label: 'Graduated',
-      value: 'B.S. Computer Science, May 2026',
+      value: 'B.S. Computer Science',
     },
     { emoji: '📍', label: 'Based in', value: 'Cookeville, Tennessee' },
   ],

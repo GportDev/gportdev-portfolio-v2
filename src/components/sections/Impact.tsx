@@ -13,7 +13,7 @@ export function Impact() {
       title='By the numbers'
       emoji='📈'
       icon={TrendingUp}
-      description='Outcomes from the products I built and the places I worked. Real numbers, with the source next to each one.'
+      description='Results from products I built and places I worked. Each number shows where it comes from.'
     >
       <Stagger
         as='ul'

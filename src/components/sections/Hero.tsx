@@ -16,7 +16,7 @@ export function Hero() {
   return (
     <section id='top' className='relative isolate overflow-hidden'>
       <Aurora />
-      <div className='mx-auto grid max-w-[1200px] items-center gap-12 px-4 pt-16 pb-20 sm:px-6 sm:pt-24 lg:grid-cols-[1.25fr_0.75fr] lg:pt-32 lg:pb-28'>
+      <div className='mx-auto grid max-w-[1200px] items-center gap-12 px-4 pt-32 pb-20 sm:px-6 sm:pt-40 lg:grid-cols-[1.25fr_0.75fr] lg:pt-46 lg:pb-28'>
         <div>
           <Reveal y={8}>
             <div className='flex flex-wrap items-center gap-3 text-sm text-muted'>

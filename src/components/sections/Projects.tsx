@@ -10,7 +10,7 @@ export function Projects() {
       id='projects'
       index='04'
       eyebrow='Projects'
-      title='Things I’m building'
+      title="Things I'm building"
       emoji='🚀'
       icon={Rocket}
       description='Client platforms from Fondor Labs and products I build on my own time, live or in progress.'

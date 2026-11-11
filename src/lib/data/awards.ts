@@ -52,15 +52,14 @@ export const awards: Award[] = [
     issuer: 'Tennessee Tech',
     year: '',
     emoji: '🌎',
-    detail: 'For international students who strengthen campus community.',
+    detail: 'Scholarship for international students.',
   },
   {
-    title: 'Dean’s List',
+    title: "Dean's List",
     issuer: 'Tennessee Tech',
     year: '',
     emoji: '🗒️',
-    detail:
-      'Recognized for academic performance in the Computer Science program.',
+    detail: 'Academic honor at Tennessee Tech.',
   },
   {
     title: 'Military Merit accolade',
@@ -68,6 +67,6 @@ export const awards: Award[] = [
     year: '2019 – 2021',
     emoji: '🎖️',
     detail:
-      'Recognized for doctrine and discipline; leadership accolades five years in a row.',
+      'Awarded for doctrine and discipline. I also earned leadership accolades five years in a row.',
   },
 ]

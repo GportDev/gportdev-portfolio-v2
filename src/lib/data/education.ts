@@ -27,10 +27,10 @@ export const education: Education[] = [
     status: 'Graduated',
     activities: [
       'Honors Council member',
-      'Honors Program “Big-sib” mentor',
+      'Honors Program "Big-sib" mentor',
       'Global Ambassador for International Students',
       'International rep, University Strategic Plan Group',
-      'Dean’s List',
+      "Dean's List",
       'Brazilian Jiu-Jitsu Club',
     ],
     featured: true,
