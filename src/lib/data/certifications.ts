@@ -24,12 +24,6 @@ export const certifications: Certification[] = [
     emoji: '🔁',
   },
   {
-    title: 'English Proficiency · Score 115',
-    issuer: 'Duolingo English Test',
-    issued: 'Apr 2023',
-    emoji: '🗣️',
-  },
-  {
     title: 'Blockchain Advanced',
     issuer: 'FIAP',
     issued: 'Jun 2022',

@@ -46,5 +46,5 @@ export const leadership: Leadership[] = [
 
 export const languages = [
   { name: 'Portuguese', level: 'Native', flag: '🇧🇷' },
-  { name: 'English', level: 'Professional (Duolingo 115)', flag: '🇺🇸' },
+  { name: 'English', level: 'Professional', flag: '🇺🇸' },
 ]
